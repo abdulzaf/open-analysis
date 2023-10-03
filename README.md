@@ -2,6 +2,6 @@
 Toolbox for multi-modal analysis techniques
 
 - computer vision:
--   step detection & gait analysis
+    - step detection & gait analysis
 - accelerometry:
--   step onset/offset detection
+    - step onset/offset detection
