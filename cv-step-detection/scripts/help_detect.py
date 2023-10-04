@@ -29,6 +29,7 @@ def get_vid_coordinates(vid_frames):
     # track pose
     frames_out = []
     for i in range(len(vid_frames)):
+        print(f'{(i/len(vid_frames)):.02f}')
         img = vid_frames[i].copy()
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         results = pose.process(img_rgb)

@@ -12,7 +12,7 @@ def read_video(dir_input, video):
     # get video data
     vid_cap = cv2.VideoCapture(os.path.join(dir_input, video))
     vid_len = int(vid_cap.get(cv2.CAP_PROP_FRAME_COUNT))
-
+    vid_fps = vid_cap.get(cv2.CAP_PROP_FPS)
     # get video frames
     vid_frames = []
     for i in range(vid_len):
@@ -21,4 +21,4 @@ def read_video(dir_input, video):
         if success:
             vid_frames.append(image)
 
-    return vid_frames
+    return vid_frames, vid_len, vid_fps
